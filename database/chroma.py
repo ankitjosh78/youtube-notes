@@ -12,12 +12,7 @@ class ChromaDB(DatabaseInterface):
                 name=collection_name, 
                 metadata={
                     "description": "YouTube Transcripts",
-                    "embedding_function": None,
-                    "hnsw_config": {
-                        "m": 64,
-                        "ef_construction": 100,
-                        "ef_search": 10
-                    },
+                    "hnsw:space": "cosine",
                 }
             )
     
